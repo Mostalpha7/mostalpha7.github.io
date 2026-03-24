@@ -2,12 +2,9 @@ import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Work } from "@/components/sections/work";
-
-const placeholders = [
-  { id: "experience", title: "Experience" },
-  { id: "teaching", title: "Teaching & Leadership" },
-  { id: "contact", title: "Contact" },
-];
+import { Experience } from "@/components/sections/experience";
+import { Teaching } from "@/components/sections/teaching";
+import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -16,27 +13,9 @@ export default function Home() {
       <Hero />
       <About />
       <Work />
-
-      {placeholders.map((section) => (
-        <section key={section.id} id={section.id} className="section-padding">
-          <div className="max-w-5xl mx-auto px-6">
-            <div
-              className="min-h-[60vh] flex items-center justify-center rounded-2xl"
-              style={{
-                backgroundColor: "var(--surface)",
-                border: "0.5px solid var(--border)",
-              }}
-            >
-              <h2
-                className="text-3xl font-semibold"
-                style={{ color: "var(--text-faint)" }}
-              >
-                {section.title}
-              </h2>
-            </div>
-          </div>
-        </section>
-      ))}
+      <Experience />
+      <Teaching />
+      <Contact />
     </>
   );
 }

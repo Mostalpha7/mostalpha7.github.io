@@ -57,7 +57,8 @@ export function Navbar() {
     return (
         <motion.header
             initial={{ y: -100 }}
-            animate={{ y: hidden ? -100 : 0 }}
+            // animate={{ y: hidden ? -100 : 0 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="fixed top-0 left-0 right-0 z-50"
             style={{
@@ -106,7 +107,7 @@ export function Navbar() {
                                 }
                             }}
                         >
-                            {link.label}
+                            <span className="relative z-10">{link.label}</span>
                             {activeSection === link.href && (
                                 <motion.div
                                     layoutId="activeSection"

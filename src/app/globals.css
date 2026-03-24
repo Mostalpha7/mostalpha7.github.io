@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
+/* ============================================
+   THEME — Design tokens for the portfolio
+   ============================================ */
+@theme {
+  /* Teal accent ramp */
+  --color-accent-50: #E0FAF3;
+  --color-accent-100: #B2F0E1;
+  --color-accent-200: #81E6CF;
+  --color-accent-300: #5EEAD4;
+  --color-accent-400: #2DD4BF;
+  --color-accent-500: #14B8A6;
+  --color-accent-600: #0D9488;
+  --color-accent-700: #0A6B56;
+  --color-accent-800: #065F46;
+  --color-accent-900: #064E3B;
+
+  /* Dark mode neutrals */
+  --color-dark-bg: #0A0A0F;
+  --color-dark-surface: #12121A;
+  --color-dark-surface-2: #1A1A24;
+  --color-dark-border: #1E1E28;
+  --color-dark-border-hover: #2A2A36;
+  --color-dark-text: #E5E5EA;
+  --color-dark-text-muted: #9494A0;
+  --color-dark-text-faint: #6B6B76;
+
+  /* Light mode neutrals */
+  --color-light-bg: #FAFAFA;
+  --color-light-surface: #FFFFFF;
+  --color-light-surface-2: #F5F5F5;
+  --color-light-border: #E5E5E5;
+  --color-light-border-hover: #D4D4D4;
+  --color-light-text: #1A1A1E;
+  --color-light-text-muted: #6B6B76;
+  --color-light-text-faint: #9494A0;
+
+  /* Font */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Animations */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ============================================
+   CSS VARIABLES — switch by mode
+   ============================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: var(--color-light-bg);
+  --surface: var(--color-light-surface);
+  --surface-2: var(--color-light-surface-2);
+  --border: var(--color-light-border);
+  --border-hover: var(--color-light-border-hover);
+  --text: var(--color-light-text);
+  --text-muted: var(--color-light-text-muted);
+  --text-faint: var(--color-light-text-faint);
+  --accent: var(--color-accent-600);
+  --accent-hover: var(--color-accent-700);
+  --accent-subtle: var(--color-accent-50);
+  --accent-text: var(--color-accent-700);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg: var(--color-dark-bg);
+  --surface: var(--color-dark-surface);
+  --surface-2: var(--color-dark-surface-2);
+  --border: var(--color-dark-border);
+  --border-hover: var(--color-dark-border-hover);
+  --text: var(--color-dark-text);
+  --text-muted: var(--color-dark-text-muted);
+  --text-faint: var(--color-dark-text-faint);
+  --accent: var(--color-accent-500);
+  --accent-hover: var(--color-accent-400);
+  --accent-subtle: color-mix(in srgb, var(--color-accent-500) 12%, transparent);
+  --accent-text: var(--color-accent-400);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE STYLES
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  transition: background-color 0.3s var(--ease-out-expo),
+    color 0.3s var(--ease-out-expo);
+}
+
+/* Transition for theme switching */
+* {
+  transition: background-color 0.3s var(--ease-out-expo),
+    border-color 0.3s var(--ease-out-expo);
+}
+
+/* Reset link styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Scrollbar styling for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border-hover);
+  border-radius: 4px;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--text);
+}
+
+/* Section spacing utility */
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }

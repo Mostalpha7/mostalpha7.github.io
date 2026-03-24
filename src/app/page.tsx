@@ -1,64 +1,69 @@
+import { Navbar } from "@/components/navbar";
+
+const sections = [
+  { id: "about", title: "About" },
+  { id: "work", title: "Selected Work" },
+  { id: "experience", title: "Experience" },
+  { id: "teaching", title: "Teaching & Leadership" },
+  { id: "contact", title: "Contact" },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center space-y-6">
-        <h1
-          className="text-5xl font-bold"
-          style={{ color: "var(--text)" }}
-        >
-          Mustapha Abdulmujeeb
-        </h1>
-        <p
-          className="text-xl"
-          style={{ color: "var(--text-muted)" }}
-        >
-          Senior Fullstack Mobile Engineer
-        </p>
-        <div className="flex gap-3 justify-center">
-          <span
-            className="px-4 py-1.5 rounded-full text-sm font-medium"
-            style={{
-              backgroundColor: "var(--accent-subtle)",
-              color: "var(--accent-text)",
-            }}
+    <>
+      <Navbar />
+
+      {/* Hero */}
+      <section className="min-h-screen flex items-center justify-center pt-16">
+        <div className="text-center space-y-4">
+          <p
+            className="text-sm font-medium tracking-wide uppercase"
+            style={{ color: "var(--accent)" }}
           >
-            Flutter
-          </span>
-          <span
-            className="px-4 py-1.5 rounded-full text-sm font-medium"
-            style={{
-              backgroundColor: "var(--accent-subtle)",
-              color: "var(--accent-text)",
-            }}
+            Senior Fullstack Mobile Engineer
+          </p>
+          <h1
+            className="text-5xl md:text-7xl font-bold tracking-tight"
+            style={{ color: "var(--text)" }}
           >
-            Node.js
-          </span>
-          <span
-            className="px-4 py-1.5 rounded-full text-sm font-medium"
-            style={{
-              backgroundColor: "var(--accent-subtle)",
-              color: "var(--accent-text)",
-            }}
+            Mustapha
+            <br />
+            Abdulmujeeb
+          </h1>
+          <p
+            className="text-lg max-w-md mx-auto"
+            style={{ color: "var(--text-muted)" }}
           >
-            PostgreSQL
-          </span>
+            Building fintech products used by 100K+ users
+          </p>
         </div>
-        <p
-          className="text-sm"
-          style={{ color: "var(--text-faint)" }}
+      </section>
+
+      {/* Placeholder sections */}
+      {sections.map((section) => (
+        <section
+          key={section.id}
+          id={section.id}
+          className="section-padding"
         >
-          Toggle dark mode → open DevTools → run:{" "}
-          <code
-            className="px-2 py-0.5 rounded text-xs"
-            style={{
-              backgroundColor: "var(--surface-2)",
-              color: "var(--accent-text)",
-            }}
-          >
-            document.documentElement.classList.toggle(&apos;dark&apos;)
-          </code>
-        </p>
-      </div>
-    </main>
+          <div className="max-w-5xl mx-auto px-6">
+            <div
+              className="min-h-[60vh] flex items-center justify-center rounded-2xl"
+              style={{
+                backgroundColor: "var(--surface)",
+                border: "0.5px solid var(--border)",
+              }}
+            >
+              <h2
+                className="text-3xl font-semibold"
+                style={{ color: "var(--text-faint)" }}
+              >
+                {section.title}
+              </h2>
+            </div>
+          </div>
+        </section>
+      ))}
+    </>
   );
 }

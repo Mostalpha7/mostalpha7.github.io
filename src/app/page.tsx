@@ -1,9 +1,9 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
+import { Work } from "@/components/sections/work";
 
 const placeholders = [
-  { id: "work", title: "Selected Work" },
   { id: "experience", title: "Experience" },
   { id: "teaching", title: "Teaching & Leadership" },
   { id: "contact", title: "Contact" },
@@ -15,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Work />
 
       {placeholders.map((section) => (
         <section key={section.id} id={section.id} className="section-padding">

@@ -164,11 +164,12 @@ export function Hero() {
                     style={{ color: "var(--text-muted)" }}
                 >
                     Flutter & Node.js engineer with 5+ years shipping fintech
-                    products to 100K+ users. Currently at{" "}
+                    products to <span className="font-medium" style={{ color: "var(--text)" }}> 100K+ </span> users.
+                    {/* Currently at{" "}
                     <span className="font-medium" style={{ color: "var(--text)" }}>
                         Trove Finance
                     </span>
-                    .
+                    . */}
                 </motion.p>
 
                 <motion.div
@@ -238,7 +239,7 @@ export function Hero() {
                         </svg>
                     </a>
                     <a
-                        href="https://linkedin.com/in/mustapha"
+                        href="https://www.linkedin.com/in/mustapha-abdulmujeeb-32680b195/"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ color: "var(--text-faint)", transition: "color 0.2s" }}

@@ -141,7 +141,9 @@ export function Hero() {
             >
                 <motion.p
                     variants={itemVariants}
-                    className="text-sm font-medium tracking-widest uppercase mb-6"
+                    // className="text-sm font-medium tracking-widest uppercase mb-6"
+                    // className="text-xs sm:text-sm font-medium tracking-widest uppercase mb-4 sm:mb-6"
+                    className="hidden sm:block text-sm font-medium tracking-widest uppercase mb-6"
                     style={{ color: "var(--accent)" }}
                 >
                     Senior Fullstack Mobile Engineer
@@ -149,18 +151,20 @@ export function Hero() {
 
                 <motion.h1
                     variants={itemVariants}
-                    className="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6"
+                    className="text-4xl sm:text-7xl md:text-7xl font-bold tracking-tight leading-tight mb-6"
                     style={{ color: "var(--text)" }}
                 >
                     I build products{" "}
                     <br className="hidden sm:block" />
-                    people{" "}
+                    people can {" "}
                     <span style={{ color: "var(--accent)" }}>rely on</span>.
                 </motion.h1>
 
                 <motion.p
                     variants={itemVariants}
-                    className="text-lg md:text-xl max-w-lg mx-auto mb-10"
+                    // className="text-lg md:text-xl max-w-lg mx-auto mb-10"
+                    className="text-base sm:text-lg md:text-xl max-w-lg mx-auto mb-8"
+
                     style={{ color: "var(--text-muted)" }}
                 >
                     Flutter & Node.js engineer with 5+ years shipping fintech

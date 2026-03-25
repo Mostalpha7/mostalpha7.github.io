@@ -60,14 +60,14 @@ export const projects: Project[] = [
         ],
         tech: ["Flutter", "Node.js", "Express", "PostgreSQL", "Prisma", "Stripe", "GPS"],
         links: [
-            {
-                label: "App Store",
-                url: "https://apps.apple.com/app/anydrop",
-                icon: "appstore",
-            },
+            // {
+            //     label: "App Store",
+            //     url: "https://apps.apple.com/app/anydrop",
+            //     icon: "appstore",
+            // },
         ],
         featured: true,
-        status: "Completed",
+        status: "In development",
     },
     {
         id: "cashmobile",

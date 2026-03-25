@@ -25,12 +25,12 @@ const techStack = [
     },
     {
         category: "Tools",
-        items: ["Git", "Jira", "Figma", "Postman", "CI/CD"],
+        items: ["Git", "NFC Payments", "Figma", "CI/CD"],
     },
-    {
-        category: "Other",
-        items: ["WebSockets", "NFC Payments", "Real-time Tracking", "Google Maps SDK"],
-    },
+    // {
+    //     category: "Other",
+    //     items: ["WebSockets", "NFC Payments", "Real-time Tracking", "Google Maps SDK"],
+    // },
 ];
 
 function AnimatedCounter({

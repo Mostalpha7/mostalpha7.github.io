@@ -22,7 +22,7 @@ const experiences = [
         company: "Benmore Technologies",
         role: "Fullstack Mobile Engineer (Flutter, Node.js)",
         location: "Chicago, US (Remote)",
-        period: "Jan 2025 — Mar 2025",
+        period: "Dec 2024 — Dec 2025",
         current: false,
         highlights: [
             "Built Anydrop delivery app end-to-end as sole mobile engineer in 8 months",

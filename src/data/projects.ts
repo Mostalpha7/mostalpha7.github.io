@@ -67,7 +67,7 @@ export const projects: Project[] = [
             // },
         ],
         featured: true,
-        status: "In development",
+        // status: "In development",
     },
     {
         id: "cashmobile",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
         ],
         tech: ["Flutter", "Node.js", "PostgreSQL", "Prisma", "Google Maps SDK"],
         links: [],
-        status: "In development",
+        // status: "done",
     },
     {
         id: "ksbtech",

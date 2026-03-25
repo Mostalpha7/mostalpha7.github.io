@@ -6,7 +6,7 @@ import { useRef } from "react";
 const experiences = [
     {
         company: "Trove Finance",
-        role: "Mobile Application Developer (Flutter)",
+        role: "Senior Software Engineering Associate (Flutter)",
         location: "Lagos, Nigeria (Remote)",
         period: "July 2021 — Present",
         current: true,
